@@ -11,6 +11,20 @@
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
+
+    <div class="modal-wrapper" id="hint-modal">
+      <div class="modal-content">
+          <h5>press w,a,s,d to slide up, left, down, right.</h5>   
+          <h5>control panel on right top</h5>  
+          <button class="abutton abutton-primary" onclick="hideHintModal()">OK</button>             
+      </div>
+    </div>
+    <script>
+      function hideHintModal(){
+        document.getElementById("hint-modal").style.display = "none";
+      }
+    </script>
+
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
