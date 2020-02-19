@@ -4,28 +4,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link rel="icon" href="<%= BASE_URL %>favicon.png">
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <link href="https://cdn.bootcss.com/normalize/8.0.1/normalize.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
   </head>
   <body>
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
-
-    <div class="modal-wrapper" id="hint-modal">
-      <div class="modal-content">
-          <h5>press w,a,s,d to slide up, left, down, right.</h5>   
-          <h5>control panel on right top</h5>  
-          <button class="abutton abutton-primary" onclick="hideHintModal()">OK</button>             
-      </div>
-    </div>
-    <script>
-      function hideHintModal(){
-        document.getElementById("hint-modal").style.display = "none";
-      }
-    </script>
-
-    <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
 </html>
