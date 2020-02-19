@@ -1,15 +1,18 @@
-import {GLTFLoader} from './vendor/GLTFLoader.js';
+import { GLTFLoader } from './vendor/GLTFLoader.js';
 import * as dat from 'dat.gui'
 
-var GuiControls = function(){
+/**
+ * wrap the dat.gui library for convience usage
+ */
+var GuiControls = function () {
     this.params = {};
     this.gui = new dat.GUI();
-    this.add = function(targetLabel,initVal,valRangeFrom,valRangeTo){
+    this.add = function (targetLabel, initVal, valRangeFrom, valRangeTo) {
         this.params[targetLabel] = initVal;
-        if(valRangeFrom === undefined){
-            return this.gui.add(this.params,targetLabel)
-        }else{
-            return this.gui.add(this.params,targetLabel,valRangeFrom,valRangeTo)
+        if (valRangeFrom === undefined) {
+            return this.gui.add(this.params, targetLabel)
+        } else {
+            return this.gui.add(this.params, targetLabel, valRangeFrom, valRangeTo)
         }
     }
 }
@@ -17,16 +20,16 @@ var GuiControls = function(){
  * load bufferGeometry from a gltf or glb file
  * @param {string} url - the url of a gltf or glb file
  */
-var loadGeometryFromGLTF = function(url){
+var loadGeometryFromGLTF = function (url) {
     var loader = new GLTFLoader();
-    return new Promise(resolve=>{
+    return new Promise(resolve => {
         loader.load(
             url,
-            function(gltf){
+            function (gltf) {
                 resolve(gltf.scene.children[0].geometry.clone());
             }
         )
     })
 }
 
-export {GuiControls,loadGeometryFromGLTF};
+export { GuiControls, loadGeometryFromGLTF };

@@ -1,5 +1,9 @@
 import { moveX, moveZ, moveY, genBezier3, genBezier2 } from './Animations.js'
 
+/**
+ *  Implementations of the main game logic
+ *  of the 2048 game
+ */
 var GameActions = function (grid, scene, cubes) {
     this.grid = grid;
     this.gridRows = grid.length;
