@@ -11,8 +11,7 @@
     "three": "^0.113.2"
   },
   "devDependencies": {
-    "@vue/cli-service": "^4.2.0",
-    "vue-template-compiler": "^2.6.11"
+    "@vue/cli-service": "^4.2.0"
   },
   "browserslist": [
     "> 1%",
